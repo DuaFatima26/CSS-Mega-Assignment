@@ -1,0 +1,118 @@
+/* Reset some basic styling */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Basic styling */
+body {
+    background: #f5f5f5;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background: darkmagenta;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+main {
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 280px;
+    padding: 20px;
+    transition: transform 0.5s, box-shadow 0.5s, opacity 0.5s;
+    opacity: 0.9;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+.card img:hover {
+    transform: rotate(5deg) scale(1.1);
+}
+
+.card h2 {
+    font-size: 1.4em;
+    margin: 15px 0;
+}
+
+.card a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.card a:hover {
+    color: #0056b3;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .card h2 {
+        font-size: 1.2em;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
